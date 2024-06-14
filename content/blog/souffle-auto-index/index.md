@@ -2,7 +2,7 @@
 title = 'Souffle Auto Index'
 date = 2024-06-14T10:57:38-05:00
 tags = ['datalog']
-draft = true
+draft = false
 [params]
     math = true
 +++

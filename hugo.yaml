@@ -1,4 +1,4 @@
-baseURL: https://sowmithk.com/
+baseURL: https://sowmith1999.github.io/
 languageCode: en-us
 title: SowmithK
 
@@ -63,3 +63,11 @@ markup:
   #   guessSyntax: true
   #   # lineNos: true
   #   sytle: monokai
+
+permalinks:
+  page:
+    blog: /blog/:year/:title
+  section:
+    blog: /blog/
+    about: /about/
+

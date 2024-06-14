@@ -2,14 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sowmithk.com/</loc>
+    <loc>https://sowmith1999.github.io/about/</loc>
     <lastmod>2024-06-14T13:18:55-05:00</lastmod>
   </url><url>
-    <loc>https://sowmithk.com/blog/</loc>
+    <loc>https://sowmith1999.github.io/</loc>
+    <lastmod>2024-06-14T13:18:55-05:00</lastmod>
+  </url><url>
+    <loc>https://sowmith1999.github.io/blog/</loc>
     <lastmod>2024-06-14T10:57:38-05:00</lastmod>
   </url><url>
-    <loc>https://sowmithk.com/categories/</loc>
+    <loc>https://sowmith1999.github.io/tags/datalog/</loc>
+    <lastmod>2024-06-14T10:57:38-05:00</lastmod>
   </url><url>
-    <loc>https://sowmithk.com/tags/</loc>
+    <loc>https://sowmith1999.github.io/blog/2024/souffle-auto-index/</loc>
+    <lastmod>2024-06-14T10:57:38-05:00</lastmod>
+  </url><url>
+    <loc>https://sowmith1999.github.io/tags/</loc>
+    <lastmod>2024-06-14T10:57:38-05:00</lastmod>
+  </url><url>
+    <loc>https://sowmith1999.github.io/categories/</loc>
   </url>
 </urlset>
