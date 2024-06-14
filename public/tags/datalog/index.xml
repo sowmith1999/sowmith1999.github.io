@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Datalog on SowmithK</title>
+    <link>http://localhost:1313/tags/datalog/</link>
+    <description>Recent content in Datalog on SowmithK</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2024 10:57:38 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/datalog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Souffle Auto Index</title>
+      <link>http://localhost:1313/blog/souffle-auto-index/</link>
+      <pubDate>Fri, 14 Jun 2024 10:57:38 -0500</pubDate>
+      <guid>http://localhost:1313/blog/souffle-auto-index/</guid>
+      <description>So Datalog rules have a bunch of queries and involve a lot of joins over multiple relations. All this involves looking up values in the relations, for these queries to run in practical amount of time, you need indexes to make the look-ups faster and avoid linear scans of the tables.
+So one of the best ways to run a datalog program well is to have a strong indexing plan, so that all the searches are covered by indexes.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+baseURL: https://sowmithk.com/
+languageCode: en-us
+title: SowmithK
+
+theme: ["PaperMod"]
+pluralizelisttitles: false 
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 5
+    - identifier: categories
+      name: Blog 
+      url: /blog/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+
+params:
+  env: production
+  mainSections:
+    - About
+    - blog 
+  math:
+    math: false
+  assets:
+    disableHLJS: false 
+  homeInfoParams:
+    Title: "Sowmith Kunapaneni"
+    Content: >
+      👋 Graduate Student in Computer Science at UAB.
+
+      - I work at [HARP Lab](https://github.com/harp-lab) on Program Analysis and Deductive Databases. [Read More](/about/)...
+
+      - *This blog is **under construction**.*, Take this route to [Github](https://github.com/sowmith1999)
+
+
+taxonomies:
+  tag: tags
+  category: categories
+
+markup:
+  goldmark:
+    renderer:
+      hardWraps: true
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+  # highlight:
+  #   codeFences: false
+  #   guessSyntax: true
+  #   # lineNos: true
+  #   sytle: monokai
