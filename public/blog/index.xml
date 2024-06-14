@@ -2,33 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog on SowmithK</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://sowmithk.com/blog/</link>
     <description>Recent content in Blog on SowmithK</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jun 2024 10:57:38 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Souffle Auto Index</title>
-      <link>http://localhost:1313/blog/souffle-auto-index/</link>
-      <pubDate>Fri, 14 Jun 2024 10:57:38 -0500</pubDate>
-      <guid>http://localhost:1313/blog/souffle-auto-index/</guid>
-      <description>So Datalog rules have a bunch of queries and involve a lot of joins over multiple relations. All this involves looking up values in the relations, for these queries to run in practical amount of time, you need indexes to make the look-ups faster and avoid linear scans of the tables.
-So one of the best ways to run a datalog program well is to have a strong indexing plan, so that all the searches are covered by indexes.</description>
-    </item>
-    <item>
-      <title>If by Rudyard Kipling</title>
-      <link>http://localhost:1313/blog/if-by-rudyard-kipling/</link>
-      <pubDate>Fri, 14 Jun 2024 10:43:13 -0500</pubDate>
-      <guid>http://localhost:1313/blog/if-by-rudyard-kipling/</guid>
-      <description>If you can keep your head when all about you
-Are losing theirs and blaming it on you,
-If you can trust yourself when all men doubt you,
-But make allowance for their doubting too;
-If you can wait and not be tired by waiting,
-Or being lied about, don’t deal in lies,
-Or being hated, don’t give way to hating,
-And yet don’t look too good, nor talk too wise:</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://sowmithk.com/blog/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
