@@ -6,10 +6,10 @@ theme: ["PaperMod"]
 pluralizelisttitles: false 
 menu:
   main:
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 5
+    # - identifier: about
+    #   name: About
+    #   url: /about/
+    #   weight: 5
     - identifier: categories
       name: Blog 
       url: /blog/
@@ -33,9 +33,13 @@ params:
     Content: >
       👋 Graduate Student in Computer Science at UAB.
 
-      - I work at [HARP Lab](https://github.com/harp-lab) on Program Analysis and Deductive Databases. [Read More](/about/)...
+      - I work at [HARP Lab](https://github.com/harp-lab) on Program Analysis and Deductive Databases. 
 
-      - *This blog is **under construction**.*, Take this route to [Github](https://github.com/sowmith1999)
+      - Here, I write about whatever I find interesting, things I learn, and things I work on.
+      
+      - I am Looking for Internships for Summer 25, If you have any opportunities, I am eager to talk more, here is my [Resume](./Resume_2024.pdf)
+
+      - *This blog is **under construction**.*, If something is broken, kindly say something [here](https://github.com/sowmith1999/sowmith1999.github.io/issues) 
 
 
 taxonomies:
@@ -69,5 +73,5 @@ permalinks:
     blog: /blog/:year/:title
   section:
     blog: /blog/
-    about: /about/
+    # about: /about/
 
