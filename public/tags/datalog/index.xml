@@ -13,8 +13,8 @@
       <link>https://sowmith1999.github.io/blog/2024/souffle-auto-index/</link>
       <pubDate>Fri, 14 Jun 2024 10:57:38 -0500</pubDate>
       <guid>https://sowmith1999.github.io/blog/2024/souffle-auto-index/</guid>
-      <description>So Datalog rules have a bunch of queries and involve a lot of joins over multiple relations. All this involves looking up values in the relations, for these queries to run in practical amount of time, you need indexes to make the look-ups faster and avoid linear scans of the tables.
-So one of the best ways to run a datalog program well is to have a strong indexing plan, so that all the searches are covered by indexes.</description>
+      <description>Introduction Datalog rules are a bunch of relational queries, each involving of joins over multiple relations. Here is a simple example of a Datalog rule:
+path(x, y) :- path(x, z), edge(z, y). The above query does Transitive closure over a graph, where path and edge are relations. The query is saying, if there is a path from x to z and there is an edge from z to y, then there is a path from x to y.</description>
     </item>
   </channel>
 </rss>
