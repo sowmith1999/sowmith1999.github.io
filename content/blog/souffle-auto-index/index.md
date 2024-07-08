@@ -52,9 +52,34 @@ Hopefully, I did a good job of explaining what, the problem we are trying to sol
 
 #### Why not just look through all the searches and figure the minimal set?
 - Well, again you can, but this borders on not possible due to sheer number of possible combinations. The number of possible combinations is something like \( 2^{m!} \), where \( m \) is the number of columns used for searches over a relation.
-- When you have \( m \) attributes involved, you have \( m! \) possible permutations of the attributes, and then, you have pick or not pick each of the \( m! \) permutations, hence the \( 2^{m!} \) possible minimal sets.
+- When you have \( m \) attributes involved, you have \( m! \) possible permutations of the attributes for an index. And then, out of the \( m! \) permutations, have to choose a minimal set of indexes that cover all searches, i.e., an index can be included in the set or not, and that leads to \( 2^{m!} \) possible combinations.
+- The above is a simplification, Section 5.1 of the paper goes into more details.
 
+#### What is MISP again?
+- MISP is the Minimum Index Selection Problem, given a set of searches over a relation, need to figure out the minimum number of indexes to cover all searches.
+- Take a set of searches \( \mathcal{S} \), and create a set of _search chains_ \( \mathcal{C} \), such that every search in \( \mathcal{S} \) is covered by a search chain in \( \mathcal{C} \).
+$$ \text{c-cover}_S(\mathcal{C}) = \forall S \in \mathcal{S} : \exists C \in \mathcal{C} : S \in C. $$
+- Now, This looks like a Minimum Chain Cover Problem(MCCP), i.e., Given a partial order, find the minimum number of chains that cover all elements. 
 
+#### How do you solve MISP?
+- We saw that MISP can be modelled as MCCP, and MCCP can be solved optimally in polynomial time by Dilworth's Theorem.
+- Dilworth's Theorem states that "... in a finite partial order, the size of the maximum anti-chain is equal to the minimum number of chains needed to cover its elements."
+- Here, anti-chain is a subset of a poset,such that no two elements are related. And, a chain is a subset of a poset, that forms a total order.
+- MCCP can be solved either via the maximum matching problem in bipartite graphs or via the maximum flow problem in networks.
+- Here are the details,
+    - To compute a minimum chain cover for a set of searches, you create a bi-paritite graph, \( G_s = (U, V, E) \), where \(U\) and \(V\) are the set of searches and \( E \) is edge from \(U\) to \(V\), if the search \(u\) in \(U\) is a subset of the search \(v\) in \(V\).
+    - From the bi-partite graph, you have to [compute a maximum matching](#how-to-compute-a-maximum-matching), which is largest set of edges such that no two edges share a vertex.
+    - A matching is a subset of edges, such that no two edges share a vertex, or each vertex in \(U\) and \(V\) appears at most once.
+    - Once you have the maximum matching, you can create the search chains, by following the edges in the matching.
+    - The number of search chains is the minimum number of indexes needed to cover all searches.
+
+#### How to compute a maximum matching?
+- Maximum Matching can be computed using Hopcroft-Karp algorithm.
+- At a super high level, there are three steps to the algorithm, and we will use the same running example as the paper does to explain.
+ $$ \mathcal{S} = \{x\}, \{x,y\}, \{x,z\}, \{x,y,z\} $$
+- First step is create a bi-paritite graph, \( G_s = (U, V, E) \) from \( \mathcal{S} \).
+![bipartite graph and maximum matching](bipartite.svg)
+- 
 - Well, this is an image.
 ![joins](join.svg)
 
