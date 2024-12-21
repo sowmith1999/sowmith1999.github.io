@@ -66,11 +66,11 @@ markup:
           - - \(
             - \)
         enable: true
-  # highlight:
-  #   codeFences: false
-  #   guessSyntax: true
-  #   # lineNos: true
-  #   sytle: monokai
+  highlight:
+    # codeFences: false
+    guessSyntax: true
+    lineNos: true
+    sytle: monokai
 
 permalinks:
   page:

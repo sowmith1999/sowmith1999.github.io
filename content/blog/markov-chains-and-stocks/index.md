@@ -6,24 +6,24 @@ draft = false
 +++
 I've been hearing of Markov Chains for a few years, never got to read about them or something with them. This is my look at them. The sole goal of this post is to get a good look at how Markov Chains work, we are going to do this by attempting to model some stock data. This post is initially written as a paper for a course I took.
 
-This is the structure of the post:
-- [Introduction](#introduction)
-    - Intro to what markov chains are, and look at the data we are using and the modelling task.
-- [Discretization](#discretization-considerations)
-    - How we are going to take some continous data and discretize it, and why.
-- [Initial Markov Model](#initial-markov-model)
-    - A Basic Model with only a few states, and how that performs against the base line.
-- [Evaluation](#evaluation-methodology)
-    - How we are going to compare these models, and what the measure is.
-- [Intial Model: Performance & Comments](#initial-model-and-comments)
-    - Some comments about performance of the intial model.
-- [Improvements & Remarks](#improvements)
-
-
+<!-- This is the structure of the post: -->
+<!-- - [Introduction](#introduction) -->
+<!--     - Intro to what markov chains are, and look at the data we are using and the modelling task. -->
+<!-- - [Discretization](#discretization-considerations) -->
+<!--     - How we are going to take some continous data and discretize it, and why. -->
+<!-- - [Initial Markov Model](#initial-markov-model) -->
+<!--     - A Basic Model with only a few states, and how that performs against the base line. -->
+<!-- - [Evaluation](#evaluation-methodology) -->
+<!--     - How we are going to compare these models, and what the measure is. -->
+<!-- - [Intial Model: Performance & Comments](#initial-model-and-comments) -->
+<!--     - Some comments about performance of the intial model. -->
+<!-- - [Improvements & Remarks](#improvements) -->
+<!---->
+<!---->
 <!-- ## Abstract -->
 <!-- Two goals of this paper are to detail out an algorithm to predict price of a stock for the next day and another algorithm that takes two stock charts and measures the similarity between two stock charts \(\alpha\) and \(\beta\). The paper is going to predominantly rely on the use of Markov chain based modeling to predict and compare the stocks. We also proposed a back testing methodology to test how good the models are for prediction. We are getting the charts from Yahoo finance.  -->
 <!---->
-<!-- --- -->
+---
 
 ## Introduction
 There are a myriad of ways to model stock, and lot of good research is being done to solve this problem, and the better the algorithm to predict stock, the more money you can make and that can be a great motivator to innovate and have better stock prediction models. These industry models can be extremely complex and use proprietary heuristics that involve working with several different types of models. For our paper, we are not involving any external factors to base the predictions on, and not using macro economic trends or factors. and we are going to use only the candle data that we can fetch about a stock.
@@ -251,11 +251,7 @@ for (curr, nxt) in zip(super_states[:-1], super_states[1:]):
 transition_probs = transition_counts.div(transition_counts.sum(axis=1), axis=0).fillna(0)
 ```
 
-**Problems** The problem with HMM is there will just be too many states, and this sparsity of states will over fit the data, in the sense that some states will have very few values, that are
-basically outliers influencing the modeling outcomes. Take our case, if we take out 36 state model and convert it to second order, the maximum number of states is 1296. We are not even using
-that large a window, so some states will have very few states and now the model needs to consider how to merge these states. This merging also cannot be done naively, there needs to some
-considerations on what states go together and how many to merge them into. We are not doing that, we are restricting ourselves to all the states of the second order Markov Model. Here are the
-results for the badly tuned second order model.
+**Problems** The problem with HMM is there will just be too many states, and this sparsity of states will over fit the data, in the sense that some states will have very few values, that are basically outliers influencing the modeling outcomes. Take our case, if we take out 36 state model and convert it to second order, the maximum number of states is 1296. We are not even using that large a window, so some states will have very few states and now the model needs to consider how to merge these states. This merging also cannot be done naively, there needs to some considerations on what states go together and how many to merge them into. We are not doing that, we are restricting ourselves to all the states of the second order Markov Model. Here are the results for the badly tuned second order model.
 
 | Stock | Always UP | 36 State Second Order Model w/o Tuning |
 |:-----:|:---------:|:--------------------------------------:|
@@ -268,20 +264,13 @@ results for the badly tuned second order model.
 ---
 
 ### Modeling Closing Remarks
-From the above efforts we saw that Markov chains modeling at its primitive is approachable. There are more complicated models based on Markov chains, Hidden Markov Models, and Higher Order
-Markov Models etc. We also learned that these models have a lot of auxiliary work that needs to be made on a per kind of stock, if not on a per-stock basis, to tune the model to do well in
-predicting a stock. For the measures, our 36 state first order Markov chain was able to beat the base line of predicting the Always up, which is a good baseline, because most of these stocks
-have a strong upward drift.
+From the above efforts we saw that Markov chains modeling at its primitive is approachable. There are more complicated models based on Markov chains, Hidden Markov Models, and Higher Order Markov Models etc. We also learned that these models have a lot of auxiliary work that needs to be made on a per kind of stock, if not on a per-stock basis, to tune the model to do well in predicting a stock. For the measures, our 36 state first order Markov chain was able to beat the base line of predicting the Always up, which is a good baseline, because most of these stocks have a strong upward drift.
 
 ---
 
 
 ## Conclusion
-In this paper, we detailed how Markov chains can be used to model stock data, or any other sequence of continuous data into states and then use the transition probabilities to bring forth a
-Markov model. We detailed how these prediction algorithms should be tested and listed the code for the all parts of the process. We iterated on the initial 8 state Markov model, by making the
-states more granular which improved the model performance over the baseline. We also talked through how to make a Markov model into a higher order model. This paper helped me learn more about
-Markov models and how they are different from DFAs. We also listed a technique for measuring the similarity of the two stocks through the transition probabilities, Jensen-Shannon divergence was
-used. Through out the paper, they are functional code snippets to recreate the work.
+In this paper, we detailed how Markov chains can be used to model stock data, or any other sequence of continuous data into states and then use the transition probabilities to bring forth a Markov model. We detailed how these prediction algorithms should be tested and listed the code for the all parts of the process. We iterated on the initial 8 state Markov model, by making the states more granular which improved the model performance over the baseline. We also talked through how to make a Markov model into a higher order model. This paper helped me learn more about Markov models and how they are different from DFAs. We also listed a technique for measuring the similarity of the two stocks through the transition probabilities, Jensen-Shannon divergence was used. Through out the paper, they are functional code snippets to recreate the work.
 
 ---
 

@@ -14,7 +14,7 @@
       <pubDate>Sat, 21 Dec 2024 00:57:38 -0500</pubDate>
       <guid>https://sowmith1999.github.io/blog/2024/markov-chains-modelling/</guid>
       <description>I&amp;rsquo;ve been hearing of Markov Chains for a few years, never got to read about them or something with them. This is my look at them. The sole goal of this post is to get a good look at how Markov Chains work, we are going to do this by attempting to model some stock data. This post is initially written as a paper for a course I took.
-This is the structure of the post:</description>
+Introduction There are a myriad of ways to model stock, and lot of good research is being done to solve this problem, and the better the algorithm to predict stock, the more money you can make and that can be a great motivator to innovate and have better stock prediction models.</description>
     </item>
     <item>
       <title>Souffle Auto Index</title>
@@ -22,7 +22,7 @@ This is the structure of the post:</description>
       <pubDate>Fri, 14 Jun 2024 10:57:38 -0500</pubDate>
       <guid>https://sowmith1999.github.io/blog/2024/souffle-auto-index/</guid>
       <description>Introduction Datalog rules are a bunch of relational queries, each involving of joins over multiple relations. Here is a simple example of a Datalog rule:
-path(x, y) :- path(x, z), edge(z, y). The above query does Transitive closure over a graph, where path and edge are relations. The query is saying, if there is a path from x to z and there is an edge from z to y, then there is a path from x to y.</description>
+1 path(x, y) :- path(x, z), edge(z, y). The above query does Transitive closure over a graph, where path and edge are relations. The query is saying, if there is a path from x to z and there is an edge from z to y, then there is a path from x to y.</description>
     </item>
   </channel>
 </rss>
