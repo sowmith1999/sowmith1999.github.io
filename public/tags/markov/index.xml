@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Blog on SowmithK</title>
-    <link>https://sowmith1999.github.io/blog/</link>
-    <description>Recent content in Blog on SowmithK</description>
+    <title>Markov on SowmithK</title>
+    <link>https://sowmith1999.github.io/tags/markov/</link>
+    <description>Recent content in Markov on SowmithK</description>
     <generator>Hugo -- 0.123.7</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Dec 2024 00:57:38 -0500</lastBuildDate>
-    <atom:link href="https://sowmith1999.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sowmith1999.github.io/tags/markov/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markov Chains &amp; Modelling</title>
       <link>https://sowmith1999.github.io/blog/2024/markov-chains-modelling/</link>
@@ -15,14 +15,6 @@
       <guid>https://sowmith1999.github.io/blog/2024/markov-chains-modelling/</guid>
       <description>I&amp;rsquo;ve been hearing of Markov Chains for a few years, never got to read about them or something with them. This is my look at them. The sole goal of this post is to get a good look at how Markov Chains work, we are going to do this by attempting to model some stock data. This post is initially written as a paper for a course I took.
 This is the structure of the post:</description>
-    </item>
-    <item>
-      <title>Souffle Auto Index</title>
-      <link>https://sowmith1999.github.io/blog/2024/souffle-auto-index/</link>
-      <pubDate>Fri, 14 Jun 2024 10:57:38 -0500</pubDate>
-      <guid>https://sowmith1999.github.io/blog/2024/souffle-auto-index/</guid>
-      <description>Introduction Datalog rules are a bunch of relational queries, each involving of joins over multiple relations. Here is a simple example of a Datalog rule:
-path(x, y) :- path(x, z), edge(z, y). The above query does Transitive closure over a graph, where path and edge are relations. The query is saying, if there is a path from x to z and there is an edge from z to y, then there is a path from x to y.</description>
     </item>
   </channel>
 </rss>

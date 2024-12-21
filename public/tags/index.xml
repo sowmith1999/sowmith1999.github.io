@@ -4,10 +4,17 @@
     <title>Tags on SowmithK</title>
     <link>https://sowmith1999.github.io/tags/</link>
     <description>Recent content in Tags on SowmithK</description>
-    <generator>Hugo -- 0.127.0</generator>
+    <generator>Hugo -- 0.123.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jun 2024 10:57:38 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 21 Dec 2024 00:57:38 -0500</lastBuildDate>
     <atom:link href="https://sowmith1999.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markov</title>
+      <link>https://sowmith1999.github.io/tags/markov/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sowmith1999.github.io/tags/markov/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Datalog</title>
       <link>https://sowmith1999.github.io/tags/datalog/</link>
